@@ -1,6 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import {CategoriesContext} from './context/CategoriesContext'
 
 const Form = () => {
+  const {categories} = useContext(CategoriesContext)
+  console.log(categories)
+
   return (
     <form className="col-12">
       <fieldset className="text-center">
@@ -8,7 +12,7 @@ const Form = () => {
       </fieldset>
 
       <div className="row mt-4">
-        <div className="col-md-4">
+        <div className="col-md-4 mb-2">
           <input
             type="text"
             name="name"
@@ -16,7 +20,7 @@ const Form = () => {
             placeholder="Search by ingredient"
           />
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4 mb-2">
           <select
             name="category"
             className="form-control"
