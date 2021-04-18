@@ -1,2 +1,9 @@
-# cocktails-
-Cocktails Recipies React App
+# Cocktails
+
+Cocktails Recipes React App
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
