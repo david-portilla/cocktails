@@ -4,7 +4,7 @@ import {RecipeContext} from './context/RecipeContext'
 
 const Form = () => {
   const {categories} = useContext(CategoriesContext)
-  const {setSearchRecipe} = useContext(RecipeContext)
+  const {setSearchRecipe, saveSearch} = useContext(RecipeContext)
 
   const [search, setSearch] = useState({
     name: '',
@@ -21,6 +21,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     setSearchRecipe(search)
+    saveSearch(true)
   }
 
   return (
