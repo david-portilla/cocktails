@@ -4,7 +4,6 @@ import {Recipe} from './Recipe'
 
 const RecipeList = () => {
   const {recipes} = useContext(RecipeContext)
-  console.log(recipes)
 
   return (
     <div className="row">

@@ -60,7 +60,7 @@ const Form = () => {
           </select>
         </div>
 
-        <div className="col-md-4 mb-2">
+        <div className="col-md-4 mb-29">
           <input
             type="submit"
             className="btn btn-block btn-primary"
