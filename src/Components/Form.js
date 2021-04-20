@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react'
-import {CategoriesContext} from './context/CategoriesContext'
-import {RecipeContext} from './context/RecipeContext'
+import {CategoriesContext} from '../context/CategoriesContext'
+import {RecipeContext} from '../context/RecipeContext'
 
 const Form = () => {
   const {categories} = useContext(CategoriesContext)
@@ -60,7 +60,7 @@ const Form = () => {
           </select>
         </div>
 
-        <div className="col-md-4">
+        <div className="col-md-4 mb-2">
           <input
             type="submit"
             className="btn btn-block btn-primary"

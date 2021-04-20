@@ -1,7 +1,8 @@
-import CategoriesProvider from './Components/context/CategoriesContext';
-import RecipeProvider from './Components/context/RecipeContext';
+import CategoriesProvider from './context/CategoriesContext';
+import RecipeProvider from './context/RecipeContext';
 import Form from './Components/Form';
 import Header from './Components/Header';
+import RecipeList from './Components/RecipeList';
 
 function App () {
   return (
@@ -12,6 +13,7 @@ function App () {
           <div className="row">
             <Form />
           </div>
+          <RecipeList />
         </div>
       </RecipeProvider>
     </CategoriesProvider>
