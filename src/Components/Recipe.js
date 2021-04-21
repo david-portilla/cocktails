@@ -39,7 +39,7 @@ export const Recipe = ({recipe}) => {
     setOpen(false)
   }
 
-  const {setIdRecipe} = useContext(ModalContext)
+  const {recipeInfo, setIdRecipe, setRecipesInfo} = useContext(ModalContext)
 
   return (
     <div className="col-md-4 mb-3">
@@ -56,6 +56,7 @@ export const Recipe = ({recipe}) => {
             onClick={
               () => {
                 setIdRecipe(recipe.idDrink)
+                setRecipesInfo({})
                 handleOpen()
               }
             }
@@ -71,7 +72,15 @@ export const Recipe = ({recipe}) => {
             }}
           >
             <div style={modalStyle} className={classes.paper}>
-              <h1>open modal</h1>
+              {/* <h1>open modal</h1> */}
+              <h2>{recipeInfo.strDrink}</h2>
+              <h3 className="mt-4"> Instructions</h3>
+              <p>{recipeInfo.strInstructions}</p>
+              <img
+                className="img-fluid my-4"
+                src={recipeInfo.strDrinkThumb}
+                alt={recipeInfo.strDrink}
+              />
             </div>
           </Modal>
         </div>
