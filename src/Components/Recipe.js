@@ -43,7 +43,6 @@ export const Recipe = ({recipe}) => {
   const {recipeInfo, setIdRecipe, setRecipesInfo} = useContext(ModalContext)
 
   const getIngredients = info => {
-    console.log(info)
     let ingredients = []
     for(let i = 1;i < 16;i++) {
       if(info[`strIngredient${ i }`] !== null) {
