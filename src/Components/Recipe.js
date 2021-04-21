@@ -39,7 +39,25 @@ export const Recipe = ({recipe}) => {
     setOpen(false)
   }
 
+
   const {recipeInfo, setIdRecipe, setRecipesInfo} = useContext(ModalContext)
+
+  const getIngredients = info => {
+    console.log(info)
+    let ingredients = []
+    for(let i = 1;i < 16;i++) {
+      if(info[`strIngredient${ i }`] !== null) {
+        console.log(info[`strIngredient${ i }`])
+        ingredients.push(
+          <li>
+            {info[`strIngredient${ i }`]}
+            {info[`strMeasure${ i }`] ? ` : ` + info[`strMeasure${ i }`] : null}
+          </li>
+        )
+      }
+    }
+    return info && ingredients
+  }
 
   return (
     <div className="col-md-4 mb-3">
@@ -72,7 +90,6 @@ export const Recipe = ({recipe}) => {
             }}
           >
             <div style={modalStyle} className={classes.paper}>
-              {/* <h1>open modal</h1> */}
               <h2>{recipeInfo.strDrink}</h2>
               <h3 className="mt-4"> Instructions</h3>
               <p>{recipeInfo.strInstructions}</p>
@@ -81,6 +98,10 @@ export const Recipe = ({recipe}) => {
                 src={recipeInfo.strDrinkThumb}
                 alt={recipeInfo.strDrink}
               />
+              <h3>Ingredients</h3>
+              <ul>
+                {getIngredients(recipeInfo)}
+              </ul>
             </div>
           </Modal>
         </div>
