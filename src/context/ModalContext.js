@@ -22,6 +22,7 @@ const ModalProvider = (props) => {
   return (
     <ModalContext.Provider
       value={{
+        recipes,
         setIdRecipe
       }}
     >

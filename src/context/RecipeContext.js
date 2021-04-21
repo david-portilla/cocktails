@@ -23,6 +23,7 @@ const RecipeProvider = (props) => {
       }
       getRecipes()
     }
+    /* eslint-disable-next-line */
   }, [searchRecipe])
 
   return (
